@@ -151,5 +151,10 @@ pegasus-configure-glite
 
 NOTE: If Error: Cannot find file with permissions: touch that file and make sure it has those permissions
 
-To run Montage workflow on LC Corona with 16 nodes and 48 ppn:
+### To run Montage workflow on LC Corona with 16 nodes and 48 ppn:
+
 flux batch -N16 -n768 -c1 --queue=pbatch -t 30m --setattr=system.bank=asccasc ./run_corona.sh
+
+### To run Genome workflow on LC Corona with 32 nodes and 48 ppn:
+
+flux batch -N32 -n1536 -c1 --queue=pbatch -t 30m --setattr=system.bank=asccasc ./run_corona.sh
