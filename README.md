@@ -1,6 +1,7 @@
 # Instructions for running Montage with Pegasus in LC Corona with Flux:
 
 Step 1: Install Condor
+
 1.1 Get the zip:
 wget https://research.cs.wisc.edu/htcondor/tarball/10.x/current/condor-x86_64_CentOS8-stripped.tar.gz
 
@@ -18,6 +19,7 @@ cd condor
 ./bin/make-personal-from-tarball
 
 Step 2: Install Pegasus
+
 2.1 Get the zip from Tarballs:
 wget https://download.pegasus.isi.edu/pegasus/5.0.7/pegasus-binary-5.0.7-x86_64_rhel_7.tar.gz 
 
@@ -28,6 +30,7 @@ tar zxf pegasus-*.tar.gz
 rm pegasus-*.tar.gz
 
 Step 3:  Install and compile Montage
+
 3.1 Get the code:
 git clone https://github.com/Caltech-IPAC/Montage.git
 
@@ -41,6 +44,7 @@ cd Montage/bin and make sure it is not empty.
 export PATH=/usr/workspace/iopp/kogiou1/Montage/bin:$PATH
 
 Step 4: Get the montage-pegasus-v3
+
 4.1 Create and activate Virtual Environment:
 python3 -m venv /path/to/pegasus-env
 source /usr/workspace/iopp/kogiou1/venvs/pegasus-env/bin/activate
@@ -53,6 +57,7 @@ pip install pegasus-wms
 git clone https://github.com/pegasus-isi/montage-workflow-v3.git
 
 Set 5: Compile the pegasus-mpi-cluster from source:
+
 5.1 Get the code:
 git clone https://github.com/pegasus-isi/pegasus/tree/master
 
@@ -89,6 +94,7 @@ echo $LD_LIBRARY_PATH
 
 Step 6: Create a single “install” directory for all pegasus software:
 (This will help in resolving errors like “cannot find .. in your path”)
+
 6.1 Move into pegasus directory (the one you compiled from source) and make a directory called install:
 cd pegasus
 mkdir install
