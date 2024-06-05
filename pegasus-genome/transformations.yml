@@ -1,0 +1,14 @@
+x-pegasus:
+  apiLang: python
+  createdBy: kogiou1
+  createdOn: 05-31-24T12:03:41Z
+pegasus: 5.0.4
+transformations:
+    - namespace: pegasus
+      name: mpiexec
+      sites:
+      - {name: condorpool, pfn: /usr/workspace/iopp/kogiou1/1000genome-workflow/pmc_corona.sh, type: installed}
+      profiles:
+        pegasus: {nodes: 2, ppn: 40}
+        condor: {getenv: "*"}
+        env:  {PATH: "/usr/workspace/iopp/kogiou1/workflows/condor/bin:/usr/workspace/iopp/kogiou1/workflows/condor/sbin:/usr/workspace/iopp/kogiou1/workflows/pegasus/install/sbin:/usr/workspace/iopp/kogiou1/workflows/pegasus/install/bin:/usr/WS2/iopp/kogiou1/venvs/pegasus-env/bin:/usr/workspace/iopp/kogiou1/Montage/bin:/usr/tce/packages/texlive/texlive-20220321/bin/x86_64-linux:/usr/tce/packages/texlive/texlive-20220321/bin:/usr/global/tools/flux_wrappers/bin:/usr/tce/packages/mvapich2/mvapich2-2.3.7-intel-classic-2021.6.0-magic/bin:/usr/tce/packages/intel-classic/intel-classic-2021.6.0-magic/bin:/usr/tce/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:."}

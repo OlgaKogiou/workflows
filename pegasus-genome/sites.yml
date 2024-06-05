@@ -1,0 +1,46 @@
+x-pegasus:
+  apiLang: python
+  createdBy: kogiou1
+  createdOn: 05-31-24T12:03:42Z
+pegasus: 5.0.4
+sites:
+- name: local
+  directories:
+  - type: localStorage
+    path: /p/lustre1/kogiou1/1000-genome-workflow/output
+    fileServers:
+    - url: file:///p/lustre1/kogiou1/1000-genome-workflow/output
+      operation: all
+  directories:
+  - type: sharedScratch
+    path: /p/lustre1/kogiou1/1000-genome-workflow/scratch
+    fileServers:
+    - url: file:///p/lustre1/kogiou1/1000-genome-workflow/scratch
+      operation: all 
+  profiles:
+    pegasus:
+      style: condor
+      stagein.clusters: 1
+      data.configuration: sharedfs
+      auxillary.local: "true"
+    condor:
+      universe: vanilla
+    env:
+      PEGASUS_HOME: /usr/workspace/iopp/kogiou1/workflows/pegasus/install
+- name: condorpool
+  directories:
+  - type: sharedScratch
+    path: /p/lustre1/kogiou1/1000-genome-workflow/scratch
+    fileServers:
+    - url: file:///p/lustre1/kogiou1/1000-genome-workflow/scratch
+      operation: all 
+  profiles:
+    pegasus:
+      style: condor
+      stagein.clusters: 1
+      data.configuration: sharedfs
+      auxillary.local: "true"
+    condor:
+      universe: vanilla
+    env:
+      PEGASUS_HOME: /usr/workspace/iopp/kogiou1/workflows/pegasus/install
