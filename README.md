@@ -158,3 +158,6 @@ flux batch -N16 -n768 -c1 --queue=pbatch -t 30m --setattr=system.bank=asccasc ./
 ### To run Genome workflow on LC Corona with 32 nodes and 48 ppn:
 
 flux batch -N32 -n1536 -c1 --queue=pbatch -t 360m --setattr=system.bank=asccasc ./run_corona.sh
+
+To find if thw job is running: flux jobs
+To find if there has been an error for the workflow: pegasus-analyzer $PWD
