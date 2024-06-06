@@ -52,6 +52,7 @@ source /usr/workspace/iopp/kogiou1/venvs/pegasus-env/bin/activate
 4.2 Install dependencies:
 pip install astropy
 pip install pegasus-wms
+pip instal "dlio_profiler_py[dlp_analyzer] @ git+https://github.com/hariharan-devarajan/dlio-profiler"
 
 4.3 Get the code:
 git clone https://github.com/pegasus-isi/montage-workflow-v3.git
