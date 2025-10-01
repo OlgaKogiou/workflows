@@ -1,4 +1,4 @@
-# Instructions for running Workflows with Pegasus in LC Corona with Flux:
+# Instructions for running Workflows with Pegasus in Corona with Flux:
 
 Step 1: Install Condor
 
