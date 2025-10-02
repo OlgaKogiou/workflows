@@ -1,9 +1,11 @@
 # Instructions for running Workflows with Pegasus in Corona with Flux:
 
-Step 1: Install Condor
+### Step 1: Install Condor
 
 1.1 Get the zip:
+```
 wget https://research.cs.wisc.edu/htcondor/tarball/10.x/current/condor-x86_64_CentOS8-stripped.tar.gz
+```
 
 1.2 Untar to your condor folder:
 tar -x -f condor*.tar.gz
@@ -18,7 +20,7 @@ rm condor-*stripped.tar.gz —> delete the condor*.tar.gz and the condor-*stripp
 cd condor
 ./bin/make-personal-from-tarball
 
-Step 2: Install Pegasus
+### Step 2: Install Pegasus
 
 2.1 Get the zip from Tarballs:
 wget https://download.pegasus.isi.edu/pegasus/5.0.7/pegasus-binary-5.0.7-x86_64_rhel_7.tar.gz 
