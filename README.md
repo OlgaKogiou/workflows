@@ -8,6 +8,7 @@ wget https://research.cs.wisc.edu/htcondor/tarball/10.x/current/condor-x86_64_Ce
 ```
 
 1.2 Untar to your condor folder:
+```
 tar -x -f condor*.tar.gz
 mkdir condor
 cd condor-*stripped
@@ -15,32 +16,41 @@ mv * ../condor
 cd ..
 (rm -rf condor-*stripped 
 rm condor-*stripped.tar.gz —> delete the condor*.tar.gz and the condor-*stripped)
+```
 
 1.3 Configure:
+```
 cd condor
 ./bin/make-personal-from-tarball
+```
 
 ### Step 2: Install Pegasus
 
 2.1 Get the zip from Tarballs:
+```
 wget https://download.pegasus.isi.edu/pegasus/5.0.7/pegasus-binary-5.0.7-x86_64_rhel_7.tar.gz 
-
-wget https://download.pegasus.isi.edu/pegasus/5.0.7/pegasus-worker-5.0.7-x86_64_rhel_7.tar.gz
+```
 
 2.2. Untar to your pegasus folder (both for pegasus and pegasus-worker):
+```
 tar zxf pegasus-*.tar.gz
 rm pegasus-*.tar.gz
+```
 
-Step 3:  Install and compile Montage
+### Step 3:  Install and compile Montage
 
 3.1 Get the code:
+```
 git clone https://github.com/Caltech-IPAC/Montage.git
+```
 
 3.2 Compile:
+```
 make
+```
 
-NOTE: make sure there are no errors. By cloning the GitHub repo we get the most recent version, likely with no compiler errors. 
-cd Montage/bin and make sure it is not empty.
+ **NOTE:** make sure there are no errors. By cloning the GitHub repo we get the most recent version, likely with no compiler errors. 
+```cd Montage/bin``` and make sure it is not empty.
 
 3.3 Save in Paths:
 export PATH=/usr/workspace/iopp/kogiou1/Montage/bin:$PATH
