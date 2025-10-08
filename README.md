@@ -216,4 +216,4 @@ To find if thw job is running: ```flux jobs```
 
 To find if there has been an error for the workflow: ```pegasus-analyzer $PWD```
 
-To see if the workflow is stuck or running: ```tail -t /p/lustre2/kogiou1/montage-workflow/scratch/run_dir/merge_whole-wf.rescue```
+To see if the workflow is stuck or running: ```tail -f /p/lustre2/kogiou1/montage-workflow/scratch/run_dir/merge_whole-wf.in.rescue```
